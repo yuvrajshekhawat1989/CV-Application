@@ -22,11 +22,10 @@ function General() {
         setEditMode(true);
     }
 
-    const handleSubmit = ()=>{
+    const handleSubmit = (e)=>{
+
         setEditMode(false);
     }
-
-    console.log(editMode)
 
     const editButton = (<button onClick={handleEditModeChange}>Edit Info</button>)
     const submitButton = (<button type="submit" onClick={handleSubmit}>Submit</button>)
@@ -65,7 +64,7 @@ function General() {
     )
     return (
         <>
-            <p>General Information</p>
+            <h3>General</h3>
             {editMode?editContent:submitContent}
         </>
     )
